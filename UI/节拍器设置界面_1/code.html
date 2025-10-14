@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Metronome Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1414b8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111121",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="w-full max-w-4xl mx-auto p-4 md:p-8">
+<div class="flex items-center pb-6">
+<button class="flex size-12 shrink-0 items-center justify-center text-black dark:text-white">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</button>
+<h1 class="text-2xl md:text-3xl font-bold leading-tight tracking-[-0.015em] text-black dark:text-white flex-1 text-center">设置</h1>
+<div class="size-12 shrink-0"></div>
+</div>
+<div class="space-y-8">
+<div>
+<h2 class="text-sm font-medium text-gray-500 dark:text-gray-400 px-4 mb-2">外观</h2>
+<div class="bg-white dark:bg-[#1C1C1E] rounded-xl p-2">
+<div class="flex items-center gap-4 px-2 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-black dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-gray-700/50 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">contrast</span>
+</div>
+<p class="text-black dark:text-white text-base font-normal leading-normal flex-1 truncate">主题风格</p>
+</div>
+<div class="shrink-0">
+<div class="flex rounded-lg bg-background-light dark:bg-gray-700/50 p-1">
+<button class="text-black dark:text-white text-sm font-medium leading-normal px-4 py-1.5 rounded-md bg-white dark:bg-gray-600">黑白</button>
+<button class="text-gray-500 dark:text-gray-300 text-sm font-medium leading-normal px-4 py-1.5 rounded-md">深色</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-sm font-medium text-gray-500 dark:text-gray-400 px-4 mb-2">反馈</h2>
+<div class="bg-white dark:bg-[#1C1C1E] rounded-xl p-2">
+<div class="flex items-center gap-4 px-2 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-black dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-gray-700/50 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">vibration</span>
+</div>
+<p class="text-black dark:text-white text-base font-normal leading-normal flex-1 truncate">震动反馈</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light dark:bg-gray-700/50 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-sm font-medium text-gray-500 dark:text-gray-400 px-4 mb-2">声音</h2>
+<div class="bg-white dark:bg-[#1C1C1E] rounded-xl p-2">
+<div class="flex items-center gap-4 px-2 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-black dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-gray-700/50 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">music_note</span>
+</div>
+<p class="text-black dark:text-white text-base font-normal leading-normal flex-1 truncate">节拍音效</p>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<button class="text-base font-medium text-gray-500 dark:text-gray-400">木鱼</button>
+<div class="text-black dark:text-white flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-sm font-medium text-gray-500 dark:text-gray-400 px-4 mb-2">其他</h2>
+<div class="bg-white dark:bg-[#1C1C1E] rounded-xl p-2 space-y-1">
+<div class="flex items-center gap-4 px-2 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-black dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-gray-700/50 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">info</span>
+</div>
+<p class="text-black dark:text-white text-base font-normal leading-normal flex-1 truncate">关于我们</p>
+</div>
+<div class="shrink-0">
+<div class="text-black dark:text-white flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 px-2 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-black dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-gray-700/50 shrink-0 size-10">
+<span class="material-symbols-outlined text-2xl">help_outline</span>
+</div>
+<p class="text-black dark:text-white text-base font-normal leading-normal flex-1 truncate">帮助与反馈</p>
+</div>
+<div class="shrink-0">
+<div class="text-black dark:text-white flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

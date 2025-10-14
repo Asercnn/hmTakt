@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Minimalist Metronome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1f2937",
+            "background-light": "#f3f4f6",
+            "background-dark": "#f3f4f6", // Changed to a soft gray
+            "text-light": "#1f2937",
+            "text-dark": "#f3f4f6",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .beat-dot {
+      transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+    }
+    .beat-dot.active {
+      background-color: #1f2937;
+      transform: scale(1.5);
+    }
+    .beat-dot.accent {
+      background-color: #1f2937;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display flex items-center justify-center min-h-screen text-text-light">
+<div class="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center p-4 lg:p-8 space-y-8 lg:space-y-0 lg:space-x-12">
+<div class="flex-shrink-0 w-full lg:w-auto flex justify-center">
+<div class="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full border-4 border-gray-800 flex items-center justify-center">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="beat-dot w-3 h-3 rounded-full bg-gray-400" style="transform: rotate(0deg) translate(11.5rem) rotate(-0deg);"></div>
+<div class="beat-dot active accent w-3 h-3 rounded-full bg-gray-400" style="transform: rotate(90deg) translate(11.5rem) rotate(-90deg);"></div>
+<div class="beat-dot w-3 h-3 rounded-full bg-gray-400" style="transform: rotate(180deg) translate(11.5rem) rotate(-180deg);"></div>
+<div class="beat-dot w-3 h-3 rounded-full bg-gray-400" style="transform: rotate(270deg) translate(11.5rem) rotate(-270deg);"></div>
+</div>
+<div class="text-center">
+<h1 class="text-gray-800 tracking-light text-7xl lg:text-8xl font-bold leading-tight font-display">120</h1>
+<p class="text-gray-800 text-lg lg:text-xl font-normal leading-normal">BPM</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:max-w-md flex flex-col justify-center space-y-8">
+<div class="flex flex-col items-center px-4 py-3 space-y-4">
+<p class="text-gray-500 text-sm font-medium">BEATS PER MEASURE</p>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-300 text-gray-800 hover:bg-gray-400 transition-colors">
+<span class="material-symbols-outlined text-3xl">remove</span>
+</button>
+<p class="text-gray-800 text-4xl font-bold leading-normal w-16 text-center">4</p>
+<button class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-300 text-gray-800 hover:bg-gray-400 transition-colors">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+</div>
+<div class="w-full px-4 py-3 space-y-4">
+<div class="relative flex w-full flex-col items-start justify-between gap-3">
+<div class="flex h-4 w-full items-center gap-4">
+<p class="text-gray-500 text-sm font-normal leading-normal">40</p>
+<div class="flex h-2 flex-1 rounded-full bg-gray-300">
+<div class="h-full w-[44.4%]" style="background: linear-gradient(90deg, #d1d5db 0%, #1f2937 100%); border-radius: 9999px;"></div>
+<div class="relative">
+<div class="absolute -left-3 -top-2.5 size-6 rounded-full bg-gray-800 border-4 border-gray-800"></div>
+</div>
+</div>
+<p class="text-gray-500 text-sm font-normal leading-normal">240</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center px-4 py-3">
+<button class="flex w-full max-w-xs cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-xl h-16 px-5 bg-gray-800 text-gray-100 text-xl font-bold leading-normal tracking-[0.015em] hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+<span class="truncate">Start</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>
