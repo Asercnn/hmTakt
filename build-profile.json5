@@ -3,15 +3,26 @@
     "signingConfigs": [
       {
         "name": "default",
-        "type": "HarmonyOS",
         "material": {
-          "certpath": "C:\\Users\\Administrator\\.ohos\\config\\default_hmTakt_T1NSluvGydDPVXhX_E375Ad-h843_ZCiPyLk1kuhwzE=.cer",
-          "storePassword": "0000001A41EA2B4B9D34A48F61CF98212FAD464FC1F1838FAD24571406CDB45ADC49944D80AE7D95FE80",
+          "certpath": "C:/Users/Administrator/.ohos/config/default_hmTakt_k0Ts66o3M_7d2qtCmb5v36dhLnY_Zn7aedHfmZ7bhD0=.cer",
+          "storePassword": "0000001B450DAAB02907D971AEBF095FB7EA41C10DB6BC429153F948093E605CF6B38831235C5E48438D6B",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001AED9C51E25DEAC7FC3FF3A620C491A1A612023FE186A98D45A0A8FE94085C7DCE6DAC307D4D80",
-          "profile": "C:\\Users\\Administrator\\.ohos\\config\\default_hmTakt_T1NSluvGydDPVXhX_E375Ad-h843_ZCiPyLk1kuhwzE=.p7b",
+          "keyPassword": "0000001BEDCF82F25A3894744783B87961CAC5D22D65B13366D7B40E0B66296EFE0D5D12F1A5F470F6F67C",
+          "profile": "C:/Users/Administrator/.ohos/config/default_hmTakt_k0Ts66o3M_7d2qtCmb5v36dhLnY_Zn7aedHfmZ7bhD0=.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\Administrator\\.ohos\\config\\default_hmTakt_T1NSluvGydDPVXhX_E375Ad-h843_ZCiPyLk1kuhwzE=.p12"
+          "storeFile": "C:/Users/Administrator/.ohos/config/default_hmTakt_k0Ts66o3M_7d2qtCmb5v36dhLnY_Zn7aedHfmZ7bhD0=.p12"
+        }
+      },
+      {
+        "name": "oh",
+        "material": {
+          "certpath": "C:/Users/Administrator/.ohos/config/openharmony/oh_hmTakt_k0Ts66o3M_7d2qtCmb5v36dhLnY_Zn7aedHfmZ7bhD0=.cer",
+          "storePassword": "0000001BE0D17C89D81446EB05CD4E5A44FCB1178E14FD00220EF7C1F63061204DA4FAA87CE1E1287C8A24",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BCB903E389DD213B93417F40476DDE34897FED46875162658104B29E60B5CF9CD6CA049E2C99BAD",
+          "profile": "C:/Users/Administrator/.ohos/config/openharmony/oh_hmTakt_k0Ts66o3M_7d2qtCmb5v36dhLnY_Zn7aedHfmZ7bhD0=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:/Users/Administrator/.ohos/config/openharmony/oh_hmTakt_k0Ts66o3M_7d2qtCmb5v36dhLnY_Zn7aedHfmZ7bhD0=.p12"
         }
       }
     ],
@@ -20,7 +31,7 @@
     "products": [
       {
         "name": "default",
-        "signingConfig": "default",
+        "signingConfig": "default"
       },
     ],
     "buildModeSet": [

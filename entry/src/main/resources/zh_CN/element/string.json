@@ -11,6 +11,14 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "title",
+      "value": "节拍数"
+    },
+    {
+      "name": "start",
+      "value": "START"
     }
   ]
 }

@@ -11,6 +11,14 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "title",
+      "value": "BEATS PER MEASURE"
+    },
+    {
+      "name": "start",
+      "value": "START"
     }
   ]
 }

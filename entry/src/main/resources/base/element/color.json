@@ -3,6 +3,22 @@
     {
       "name": "start_window_background",
       "value": "#FFFFFF"
+    },
+    {
+      "name": "dark_gackground",
+      "value": "#11111f"
+    },
+    {
+      "name": "circleStroke",
+      "value": "#77FFFFFF"
+    },
+    {
+      "name": "circleFill",
+      "value": "#11FFFFFF"
+    },
+    {
+      "name": "fontColor",
+      "value": "#FFFFFF"
     }
   ]
 }

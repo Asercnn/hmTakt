@@ -1,27 +1,64 @@
 import { preferencesUtil } from "pre_as"
+import BPMComponent from '../component/BPMComponent'
+import BPMControllerComponent from '../component/BPMControllerComponent';
+import Animator, { AnimatorResult } from '@ohos.animator';
+
 
 @Entry
 @Component
 struct Index {
-  async aboutToAppear(): Promise<void> {
-    const a = await preferencesUtil.getPreferenceValue("aaa","666","value")
-    console.log(`a:${JSON.stringify(a)}`)
+  @State bat:number = 4;  // 拍子
+  @State BPM:number = 120;  // 节拍
+  @State quarter:number = 1; // 动画刻
+  @Provide animateManager?:AnimatorResult = undefined;  // 动画管理对象
+  aboutToAppear(): void {
+    this.InitAnimate();
   }
-
-  @State message: string = 'Hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .onClick(()=>{
-        preferencesUtil.putPreferenceValue("aaa","777","value")
-      })
-      .width('100%')
+  InitAnimate(){
+    this.animateManager = Animator.create({
+      duration:300,
+      easing:"ease",
+      delay:0,
+      fill:"forwards",
+      direction:'normal',
+      iterations:1,
+      begin:0,
+      end:1
+    })
+    this.animateManager.onframe = (quarter:number)=>{
+      this.quarter = quarter;
     }
-    .height('100%')
+  }
+  build() {
+    Column() {
+      GridRow({
+        columns:{
+          xs:1,
+          sm:2
+        },
+        gutter:{
+          x:0,
+          y:100
+        },
+        breakpoints:{
+          value:["400vp"]
+        },
+        direction:GridRowDirection.Row
+      }){
+        GridCol(){
+          BPMComponent({bat:this.bat,BPM:this.BPM,quarter:this.quarter})
+        }
+
+        GridCol(){
+          BPMControllerComponent({bat:this.bat,BPM:this.BPM})
+        }
+
+      }
+
+    }
+    .justifyContent(FlexAlign.Center)
+    .backgroundColor($r("app.color.dark_gackground"))
+    .width('100%')
+    .height("100%")
   }
 }
