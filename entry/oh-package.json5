@@ -6,7 +6,9 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "pre_as": "file:./../preferences"
+    "pre_as": "file:./../preferences",
+    "libnative.so": "file:./src/main/cpp/types/libnative"
+
   }
 }
 

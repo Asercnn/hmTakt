@@ -5,10 +5,16 @@ export default struct BPMComponent {
   @Prop BPM:number;
   @Prop bat:number;
   @Prop quarter:number; // 动画刻
-
+  @Prop @Watch("start")isStart:boolean; // 是否开始播放
 
   CirW:number = 300;  // 圆宽
   CirH:number = 300;  // 圆高
+
+  start(){
+    if (this.isStart) {
+
+    }
+  }
 
   /**
    * 获取角度

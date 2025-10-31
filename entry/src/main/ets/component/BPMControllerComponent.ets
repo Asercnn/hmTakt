@@ -1,10 +1,10 @@
 import { AnimatorResult } from '@ohos.animator';
-import Space from '../../../../.preview/cache/.default/entry/src/main/ets/component/SpaceComponent';
 
 @Component
 export default struct BPMControllerComponent {
   @Link bat: number;
   @Link BPM: number;
+  @Link isStart:boolean;  // 是否开始播放
   @Consume animateManager?: AnimatorResult; // 动画管理对象
   @State quarter: number = 0; // 动画刻
   @State startHover: boolean = false; // 按钮是否选中
@@ -28,7 +28,7 @@ export default struct BPMControllerComponent {
   }
 
   start() {
-
+    this.isStart = !this.isStart;
   }
 
   /**
@@ -133,7 +133,7 @@ export default struct BPMControllerComponent {
 
       }
 
-      Button($r("app.string.start"))
+      Button(this.isStart?$r("app.string.stop"):$r("app.string.start"))
         .onClick(() => this.start())
         .backgroundColor(Color.Transparent)
         .linearGradient({

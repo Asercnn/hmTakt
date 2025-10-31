@@ -10,6 +10,7 @@ struct Index {
   @State bat:number = 4;  // 拍子
   @State BPM:number = 120;  // 节拍
   @State quarter:number = 1; // 动画刻
+  @State isStart:boolean = false; // 是否开始
   @Provide animateManager?:AnimatorResult = undefined;  // 动画管理对象
   aboutToAppear(): void {
     this.InitAnimate();
@@ -46,11 +47,20 @@ struct Index {
         direction:GridRowDirection.Row
       }){
         GridCol(){
-          BPMComponent({bat:this.bat,BPM:this.BPM,quarter:this.quarter})
+          BPMComponent({
+            bat:this.bat,
+            BPM:this.BPM,
+            quarter:this.quarter,
+            isStart:this.isStart
+          })
         }
 
         GridCol(){
-          BPMControllerComponent({bat:this.bat,BPM:this.BPM})
+          BPMControllerComponent({
+            bat:this.bat,
+            BPM:this.BPM,
+            isStart:this.isStart,
+          })
         }
 
       }
